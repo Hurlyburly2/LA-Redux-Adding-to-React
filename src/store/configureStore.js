@@ -6,4 +6,4 @@ let configureStore = () => {
   return store
 }
 
-export default configureStore
+export default configureStorex
