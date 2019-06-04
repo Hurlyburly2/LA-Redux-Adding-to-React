@@ -25,6 +25,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.23.0",
     "react": "~15.4.2",
-    "react-dom": "~15.4.2"
+    "react-dom": "~15.4.2",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0"
   }
 }
