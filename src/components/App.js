@@ -1,12 +1,13 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 
 import GroceryPageContainer from '../containers/GroceryPageContainer'
 
 const App = (props) => {
   return (
-    <div>
+    <Provider store={props.store}>
       <GroceryPageContainer />
-    </div>
+    </Provider>
   )
 };
 
