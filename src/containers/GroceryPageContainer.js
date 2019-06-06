@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-
-import { addNewGrocery } from '../modules/groceries'
 
 import GroceryListContainer from './GroceryListContainer'
 import GroceryFormContainer from './GroceryFormContainer'
@@ -16,21 +13,10 @@ class GroceryPageContainer extends Component {
       <div>
         <h1>Grocery List Redux</h1>
         <GroceryFormContainer />
-        <GroceryListContainer
-          groceries={this.props.groceryList}
-        />
+        <GroceryListContainer />
       </div>
     )
   }
 };
 
-const mapStateToProps = (state) => {
-  return {
-    groceryList: state.groceries.groceryList
-  }
-}
-
-export default connect (
-  mapStateToProps,
-  null
-)(GroceryPageContainer)
+export default GroceryPageContainer
