@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { clearForm, handleNameChange } from '../modules/groceries'
+import { clearForm, handleNameChange, addNewGrocery } from '../modules/groceries'
 import GroceryInputField from '../components/GroceryInputField'
 
 class GroceryFormContainer extends Component {
@@ -50,12 +50,14 @@ class GroceryFormContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    name: state.groceries.name
+    name: state.groceries.name,
+    groceryList: state.groceries.groceryList
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    addNewGrocery: (grocery) => dispatch(addNewGrocery(grocery)),
     handleNameChange: (event) => dispatch(handleNameChange(event)),
     clearForm: () => dispatch(clearForm())
   }
