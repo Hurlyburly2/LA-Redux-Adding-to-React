@@ -15,10 +15,7 @@ class GroceryPageContainer extends Component {
     return (
       <div>
         <h1>Grocery List Redux</h1>
-        <GroceryFormContainer
-          addNewGrocery={this.props.addNewGrocery}
-          groceryList={this.props.groceryList}
-        />
+        <GroceryFormContainer />
         <GroceryListContainer
           groceries={this.props.groceryList}
         />
@@ -33,13 +30,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addNewGrocery: (grocery) => dispatch(addNewGrocery(grocery))
-  }
-}
-
 export default connect (
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(GroceryPageContainer)
